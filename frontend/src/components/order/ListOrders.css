@@ -1,0 +1,28 @@
+.list-orders-container {
+    padding: 20px;
+}
+
+.orders-title {
+    margin-bottom: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.orders-title i {
+    color: var(--color-primary);
+}
+
+.rdt_Table {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-m);
+    overflow: hidden;
+}
+
+.rdt_TableHead {
+    background-color: var(--bg-page);
+}
+
+.rdt_TableRow:hover {
+    background-color: #fafafa;
+}

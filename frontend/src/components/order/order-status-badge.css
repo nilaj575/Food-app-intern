@@ -1,0 +1,22 @@
+/* Shared status pill badges used in ListOrders and OrderDetails */
+
+.status-delivered,
+.status-pending {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+
+.status-delivered {
+  background: #e8f8f1;
+  color: #1ba672;
+}
+
+.status-pending {
+  background: #fdeceb;
+  color: #e23744;
+}

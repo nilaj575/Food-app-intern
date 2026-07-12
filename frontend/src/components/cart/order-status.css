@@ -1,0 +1,28 @@
+/* Order success page styles */
+
+.order-success-card {
+  max-width: 480px;
+  margin: 3rem auto;
+  background: var(--bg-surface);
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow-card);
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+
+.btn-pill-primary {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: var(--color-primary);
+  color: #fff !important;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.btn-pill-primary:hover {
+  background: var(--color-primary-dark);
+  color: #fff;
+}

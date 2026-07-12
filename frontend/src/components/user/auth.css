@@ -1,0 +1,73 @@
+/* Shared auth styles for Login, Register, UpdateProfile */
+
+.input-icon-group {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon-group .input-icon {
+  position: absolute;
+  left: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+
+.input-icon-group .form-control {
+  padding-left: 2.5rem !important;
+}
+
+.auth-links-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.auth-links-row a {
+  font-weight: 600;
+}
+
+/* Avatar upload */
+.avatar-upload-wrap {
+  position: relative;
+  width: 5.5rem;
+  height: 5.5rem;
+  margin: 0 auto 1rem;
+}
+
+.avatar-upload-wrap .avatar {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
+  border: 2px solid var(--border-color);
+}
+
+.avatar-upload-btn {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  border: 2px solid var(--bg-surface);
+}
+
+.avatar-upload-btn input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
