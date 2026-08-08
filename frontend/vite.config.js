@@ -7,8 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        // target: "https://internship-b7.onrender.com",
-        target: "http://localhost:4000",
+        target: "https://food-app-intern.onrender.com" || "http://localhost:4000",
         changeOrigin: true,
         secure: false,
       },
