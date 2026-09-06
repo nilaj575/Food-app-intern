@@ -8,7 +8,7 @@ import {
   updateCartQuantity,
   removeItemFromCart,
 } from "../redux/actions/cartActions";
-import axios from "axios";
+import api from "../utils/api";
 import { getMenus } from "../redux/actions/menuActions";
 
 const Fooditem = ({ fooditem, restaurant }) => {
@@ -144,7 +144,7 @@ const Fooditem = ({ fooditem, restaurant }) => {
               if (!window.confirm("Delete this food item?")) return;
 
               try {
-                await axios.delete(`/api/v1/eats/item/${fooditem._id}`, {
+                await api.delete(`/v1/eats/item/${fooditem._id}`, {
                   withCredentials: true,
                 });
 

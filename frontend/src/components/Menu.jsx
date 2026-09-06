@@ -8,7 +8,7 @@ import {
 } from "../redux/actions/menuActions"; // ✅ FIXED IMPORT
 import { getRestaurants } from "../redux/actions/restaurantAction";
 import Fooditem from "./Fooditem";
-import axios from "axios";
+import api from "../utils/api";
 
 const Menu = () => {
   const { id } = useParams();
@@ -43,7 +43,7 @@ const Menu = () => {
   // fetch food items
   const fetchItems = async () => {
     try {
-      const { data } = await axios.get(`/api/v1/eats/items/${id}`);
+      const { data } = await api.get(`/v1/eats/items/${id}`);
       setAvailableItems(data.data);
     } catch (err) {
       console.error("failed to load items", err);
@@ -76,7 +76,7 @@ const Menu = () => {
         restaurant: id,
       };
 
-      const { data } = await axios.post("/api/v1/eats/item", payload, {
+      const { data } = await api.post("/v1/eats/item", payload, {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
       });
@@ -114,8 +114,8 @@ const Menu = () => {
           const deleteMenu = async () => {
             if (!window.confirm("Delete this menu category?")) return;
             try {
-              await axios.delete(
-                `/api/v1/eats/stores/${id}/menus/${menu._id}`,
+              await api.delete(
+                `/v1/eats/stores/${id}/menus/${menu._id}`,
                 {
                   withCredentials: true,
                 },
@@ -322,8 +322,8 @@ const Menu = () => {
                     if (!newFood.name) return alert("Enter name first");
 
                     try {
-                      const { data } = await axios.post(
-                        "/api/v1/ai/generate-food-ai",
+                      const { data } = await api.post(
+                        "/v1/ai/generate-food-ai",
                         {
                           name: newFood.name,
                           category: itemToAdd.category || "",

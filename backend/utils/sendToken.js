@@ -9,6 +9,8 @@ const sendToken = (user, statusCode, res) => {
       Date.now() + process.env.JWT_EXPIRES_TIME * 24 * 60 * 60 * 1000
     ),
     httpOnly: true,
+    secure: process.env.NODE_ENV === "PRODUCTION",
+    sameSite: process.env.NODE_ENV === "PRODUCTION" ? "none" : "lax",
   };
 
   res.cookie("jwt", token, cookieOptions);
